@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>JoKenPô</title>
+</head>
+
+<body>
+  <img class="ppt" src="./assets/luta.png" alt="Pedra Papel e Tesoura">
+  <div class="container">
+
+    <div class="special-screen" id="initial-screen">
+      <div id="initial-message">
+        <h2>JO-KEN-PÔ!</h2>
+        <p>VOCÊ FOI DESAFIADO PELO <span class="color-name">ASH</span>!</p>
+        <p>QUEM MARCAR <span class="color-name">10</span> PONTOS PRIMEIRO É O VENCEDOR!!!</p>
+        <p><span class="color-text">Clique para aceitar o desafio!</span></p>
+        <p><span class="color-text1">[caso tenha coragem]</span></p>
+      </div>
+    </div>
+
+    <h1>Jo-Ken-Pô</h1>
+    <div class="buttons">
+      <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
+      <button id="paper" onclick="playHuman('paper')"> &#x1F590;</button>
+      <button id="scissors" onclick="playHuman('scissors')">&#x270C;</button>
+    </div>
+
+    <p class="result"></p>
+    <p class="your-score">Sua Pontuação: <span id="human-score">0</span></p>
+    <p class="score-of-oponent">Pontuação do Ash: <span id="ash-score">0</span></p>
+  </div>
+
+  <div class="special-screen" id="special-screen">
+    <div class="message" id="special-message"></div>
+    <div class="paper-rain" id="paper-rain"></div>
+  </div>
+</body>
+<script src="scripts.js"></script>
+
+</html>

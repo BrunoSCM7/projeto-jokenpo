@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background: url("https://source.unsplash.com/1600x900/?landscape");
+  background-size: cover; */
+  background: rgb(34,68,89);
+  background: linear-gradient(180deg, rgba(34,68,89,1) 0%, rgba(217,164,65,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.ppt{
+  width: 15%;
+  margin-top: -7%;
+}
+
+.container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.buttons {
+  margin: 30px 0;
+}
+
+button {
+  padding: 10px;
+  margin: 0 30px;
+  font-size: 50px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+#rock {
+  background-color: #662400;
+}
+
+#paper {
+  background-color: #FF6B1A;
+}
+
+#scissors {
+  background-color: #00B3AD;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.your-score span {
+  color: darkgreen;
+}
+
+.score-of-oponent span {
+  color: darkred;
+}
+
+.special-screen {
+  position: fixed;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(0, 255, 0, 0.2); /* cor verde com opacidade */
+  display: none;
+  border-radius: 5px;
+}
+
+.special-screen.active {
+  display: block;
+}
+
+#initial-screen {
+  width: 60vw;
+  height: 60vh;
+  background-color: rgba(255, 255, 255, 0.96);
+  color: black;
+  display: none;
+  padding-top: 4em;
+  border-radius: 30px;
+  cursor: pointer;
+  
+}
+
+#initial-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2vw;
+  text-align: center;
+}
+
+#initial-screen h2 {
+  color: #00B3AD;
+  font-size: 3.5vw;
+  text-align: center;
+}
+
+#initial-screen p {
+  font-size: 2.5vw;
+  text-align: center;
+  width: 70%;
+}
+
+#initial-screen .color-name {
+  color: red;
+}
+
+#initial-screen .color-text {
+  background-color: rgb(13, 30, 30);
+  padding: 5px;
+  color: rgb(218, 218, 218);
+  /* margin-bottom: 15px; */
+}
+
+#initial-screen .color-text1 {
+  background-color: rgb(74, 0, 0);
+  color: rgb(218, 218, 218);
+}
+
+#initial-screen.active {
+  display: block;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bolder;
+  text-shadow: 0px 0px 10px black;
+  transition: 2s ease-in-out;
+}
+
+.paper {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 205, 6);
+  border-radius: 50%;
+  animation: paper-fall 2s linear infinite;
+}
+
+@keyframes paper-fall {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.game-over-effect {
+  animation: shake 0.5s linear;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Estilos para telas menores que 500*/
+@media screen and (max-width: 500px){
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 90vw;
+    height: 70vh;
+  }
+
+  .ppt{
+    width: 50%;
+    margin-top: -50px;
+  }
+
+  .buttons{
+    margin: 27px 50px;
+  }
+
+  #paper{
+    display: block;
+    margin: 10px auto;
+  }
+
+  #initial-message {
+    text-align: center;
+  }
+  
+  #initial-screen h2 {
+    color: #00B3AD;
+    font-size: 7vw;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  #initial-screen p {
+    font-size: 6vw;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Telas maiores que 500 e menores que 850 */
+@media only screen and (min-width: 500px) and (max-width: 850px) {
+  #initial-screen {
+    width: 90vw;
+    height: 90vh;
+  }
+
+  #initial-screen h2 {
+    font-size: 7vw;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  #initial-screen p {
+    font-size: 5vw;
+    line-height: 1.5;
+    text-align: center;
+    width: 80%;
+  }
+
+  .ppt{
+    /* display:block; */
+    width: 30%;
+    margin-top: -4;
+  }
+  
+
+}
