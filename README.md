@@ -4,7 +4,7 @@
   Projeto desenvolvido com HTML, CSS e JavaScript!
 </p>
 
-<p>Para acessar, <a href="" target="_blank">clique aqui</a>.</p>
+<p>Para acessar, <a href="https://brunoscm7.github.io/projeto-jokenpo/" target="_blank">clique aqui</a>.</p>
 
 <p>Ganha quem fizer 10 pontos primeiro; </p>
 <p>Pode reiniciar o jogo quantas vezes quiser. </p>
