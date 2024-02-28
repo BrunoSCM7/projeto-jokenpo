@@ -1,6 +1,6 @@
 # Projeto JOKENPÔ
 
-<p>Aceite o desafio do Ash e venha competir este duelo de Jokenpô! <br>
+<p>Aceite o desafio do Ash e venha competir neste duelo de Jokenpô! <br>
   Projeto desenvolvido com HTML, CSS e JavaScript!
 </p>
 
